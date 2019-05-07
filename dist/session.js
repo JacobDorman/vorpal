@@ -478,7 +478,7 @@ session.execCommandSet = function (wrapper, callback) {
     res.then(function (data) {
       onCompletion(wrapper, undefined, data);
     }).catch(function (err) {
-      onCompletion(wrapper, true, err);
+      onCompletion(wrapper, err);
     });
   }
 
