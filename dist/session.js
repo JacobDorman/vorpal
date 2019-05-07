@@ -429,7 +429,6 @@ session.execCommandSet = function (wrapper, callback) {
       } else {
         stack = err;
       }
-      self.log(stack);
       self.parent.emit('client_command_error', { command: wrapper.command, error: err });
     } else if (self.isLocal()) {
       self.parent.emit('client_command_executed', { command: wrapper.command });
